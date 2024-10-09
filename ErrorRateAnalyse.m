@@ -2,7 +2,6 @@ function [errorRate] = ErrorRateAnalyse(spreadFactor,sourceCodeNum,...
     m_seq,fc,fs,soureRata,snr)
 
 % 随机信源
-% rng(500, 'twister');
 source = randi([0 1], 1, sourceCodeNum);
 % stem(source);
 % 扩频
@@ -48,6 +47,6 @@ r_s = (sign(r_s)+1)/2;
 % stem(r_s);
 % 求误码率
 errorNum = sum(abs(r_s - source));
-errorRate = errorNum/sourceCodeNum*100;
+errorRate = errorNum/sourceCodeNum
 
 end
